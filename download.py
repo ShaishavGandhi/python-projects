@@ -7,7 +7,8 @@ def getTorrent():
 	#Finding corresponding name of torrent to be displayed
 	global count
 	tempTitle=allTitles[count].text
-	print tempTitle
+	tempSize=allSizes[count+1].text
+	print tempTitle+"\t"+tempSize
 
 	answer = raw_input("1. Download\n2.Next result")
 
@@ -39,6 +40,8 @@ soup = BeautifulSoup(htmlString)
 #Finding all anchor tags which are magnet links
 allAs= soup.findAll("a",{"class":"imagnet icon16"})
 allTitles = soup.findAll("a",{"class":"cellMainLink"})
+allSizes = soup.findAll("td",{"class":"nobr center"})
+
 
 getTorrent()
 
