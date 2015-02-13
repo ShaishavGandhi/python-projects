@@ -25,7 +25,7 @@ series = raw_input("Series?")
 season = raw_input("Season?")
 episode= raw_input("Episode?")
 
-queryString=series+" s"+season+" e"+episode
+queryString=series+" s"+season+"e"+episode
 
 #Setting up URL and getting HTTP response with the DOM of the page
 url="http://katproxy.com/usearch/"+queryString+"/"
